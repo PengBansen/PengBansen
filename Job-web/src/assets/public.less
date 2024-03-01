@@ -1,0 +1,2348 @@
+@import "initialize.css";
+
+main {
+  margin: 0 auto;
+  width: (750rem / @baseFont);
+  height: 100%;
+}
+
+/* 底部加载样式 */
+.dotsbox {
+  padding-top: .2rem;
+  width: 15rem;
+  line-height: 1rem;
+  display: flex;
+  margin: 0 auto;
+
+  div {
+    flex: 1;
+
+    &:nth-child(1) {
+      padding-left: 1.4rem;
+    }
+  }
+
+  .dotstext {
+    text-align: right;
+    font-size: .4rem;
+    color: #383838;
+  }
+
+  .dots {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    span {
+      box-sizing: border-box;
+      margin-left: .2rem;
+      width: 0.2em;
+      height: 0.2em;
+      border-radius: 50%;
+      background-color: #3c7efe;
+      animation: fade 0.6s ease-in-out alternate infinite;
+
+      &:nth-of-type(1) {
+        animation-delay: -0.4s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: -0.2s;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@baseFont: 50;
+
+// 登录页面
+form {
+  width: (680rem / @baseFont) !important;
+  height: 100%;
+  margin: 0 auto;
+
+  .register_head {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+
+    .header {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      background-color: #fff;
+      font-size: 0.58rem;
+      color: #4e4e51;
+      line-height: (55rem / @baseFont);
+      padding: 0.2667rem 0;
+      display: flex;
+
+    }
+
+    .retreat {
+      width: 43%;
+      text-align: left;
+
+      &::before {
+        font-family: "icomoon";
+        content: "\efba" !important;
+        font-size: .5rem !important;
+
+        padding-left: 0.2rem;
+      }
+    }
+
+    .basics-title {
+      font-size: .7rem;
+    }
+  }
+
+  // 主要内容
+  .register_box {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    background-color: #fff;
+
+    i {
+      font-style: normal;
+    }
+
+    .box_head {
+      display: flex;
+      flex-direction: column;
+      margin: 1.3rem 0 0;
+
+      .head_title {
+        color: #1d1c1c;
+        font-size: 1rem;
+      }
+
+      .head_note {
+        font-size: .6rem;
+        color: #9d9ea0;
+        margin-top: .2rem;
+        margin-bottom: .5rem;
+
+      }
+    }
+
+    .register_contents {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      span {
+        width: 100%;
+        height: 2rem;
+        padding-top: .6rem;
+
+        &:nth-child(2n) {
+          padding: .1rem 0 !important;
+          height: .2rem;
+          font-size: .6rem;
+          color: #e61717;
+        }
+
+        input {
+          vertical-align: text-bottom;
+          width: 73%;
+          border: transparent;
+          box-sizing: border-box;
+          font-size: .7rem;
+          color: #4a4b4d;
+
+          &::placeholder {
+            font-size: .6rem;
+          }
+        }
+
+        .send {
+          display: inline-block;
+          width: 27%;
+          font-size: .58rem;
+          color: #4a4b4d;
+          border: none;
+          padding: 0;
+          margin: 0;
+          text-align: right;
+          background-color: transparent;
+
+          .timer {
+            color: #4a4b4d;
+            font-size: .5rem;
+          }
+        }
+      }
+
+
+    }
+
+    .agreement {
+      width: 100%;
+      display: flex;
+      margin-top: 2rem;
+      margin-bottom: 1.3rem;
+
+      span {
+        line-height: .8rem;
+
+        input[type="checkbox"] {
+          width: 0.6rem;
+          height: 0.6rem;
+          margin-right: 0.3rem;
+          outline: none;
+          margin-top: .24rem;
+        }
+
+        i {
+          color: #9d9ea0;
+          font-size: .53rem;
+          padding-bottom: .1rem;
+        }
+
+        a {
+          font-size: .5rem;
+        }
+
+      }
+
+    }
+
+    .login {
+      background-color: #d5d8e1;
+      width: 99%;
+      height: 1.9rem;
+      border-radius: 2rem;
+      margin: 0 auto;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        font-size: 0.7rem;
+        width: 100%;
+        line-height: 2rem;
+        border: transparent;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// 顶部搜索
+.cephalosome {
+  display: block;
+  width: (750rem / @baseFont);
+  line-height: (80rem / @baseFont);
+
+  .search-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex !important;
+
+
+    text-align: center;
+    background-color: #05319e;
+    color: #fff;
+    padding-top: 0.2667rem;
+
+    .site {
+      width: 2.5rem;
+      height: 1.23rem;
+      line-height: 1.23rem;
+      font-size: 0.6rem;
+      position: relative;
+      margin-right: 1rem;
+
+      .site_region {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -1.1rem;
+        background-color: #fff;
+        border-radius: 0.1rem;
+        z-index: 20;
+        box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+
+        div {
+          color: #77798e;
+          padding: 0.04rem 0.4067rem;
+
+          &:nth-child(n + 2) {
+            box-sizing: border-box;
+            border-top: .01rem solid #c3cbd6;
+          }
+        }
+      }
+
+      i {
+        position: absolute;
+        right: -0.367rem;
+        transition: all 0.2s;
+        font-style: normal;
+        margin-left: 0.2rem;
+        transform: rotate(0deg);
+      }
+
+      i::after {
+        font-family: "icomoon";
+        content: "\1e3";
+        font-size: 0.5rem;
+        vertical-align: top;
+      }
+    }
+
+    .pull-down {
+      transition: all 0.8s;
+      transform: rotate(0deg);
+
+      .pull_down {
+        color: #d60505;
+      }
+    }
+
+    .search {
+      box-sizing: border-box;
+      flex: 1;
+      background-color: #f7f7f6;
+      border-radius: 0.9rem;
+      color: #77798e;
+      height: 1.1rem;
+      line-height: 1.1rem;
+      font-size: 0.56rem;
+      margin-top: 0.0367rem;
+    }
+
+    .information {
+      margin: 0 0.5667rem;
+      font-size: 0.8rem;
+
+      &::after {
+        vertical-align: top;
+        font-family: "icomoon";
+        content: "\f53c";
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+// 底部导航
+.nav-content {
+  position: absolute;
+  bottom: -1.3333rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.5rem;
+
+  div {
+    flex: 1;
+    height: 2.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      flex: 1;
+      font-size: 0.48rem;
+      color: #383838;
+    }
+
+    img {
+      width: 1.6667rem;
+      height: 1.6667rem;
+      background-size: 100%;
+    }
+  }
+}
+
+.navigation {
+  position: fixed;
+  z-index: 10;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: (750rem / @baseFont);
+  text-align: center;
+  background-color: #fff;
+  color: #fff;
+  padding: 0.1333rem 0;
+  // 1.水平阴影的位置
+  // 2.垂直阴影的位置
+  // 3.模糊程度
+  // 4.阴影的尺寸
+  // 5.阴影的颜色
+  box-shadow: 1px -1px 8px -4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+
+  .navigation_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    i {
+      font-style: normal;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      color: #9499b0;
+      font-size: 0.5rem;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        flex: 1;
+      }
+
+      .hom_ico::after {
+        display: block;
+        font-family: "icomoon";
+        content: "\fb6c";
+        font-weight: 700;
+        font-size: 0.7rem;
+      }
+
+      .position_ico::after {
+        display: block;
+        font-family: "icomoon";
+        content: "\eb15";
+        font-weight: 700;
+        font-size: 0.7rem;
+      }
+
+      .work_ico::after {
+        display: block;
+        font-family: "icomoon";
+        content: "\ecd7";
+        font-weight: 700;
+        font-size: 0.7rem;
+      }
+
+      .my_ico::after {
+        display: block;
+        font-family: "icomoon";
+        content: "\ef82";
+        font-weight: 700;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+// 首页图片
+
+.banner {
+  width: (750rem / @baseFont);
+  height: (368rem / @baseFont);
+  background-color: #05319e;
+  position: relative;
+
+  img {
+    width: (750rem / @baseFont);
+  }
+}
+
+// 公用职位列表样式
+.option {
+  padding-top: 2rem;
+  width: (750rem / @baseFont);
+  height: 100%;
+  background-color: #f6f6f6;
+  border-radius: .3rem;
+  padding-bottom: 1px;
+
+  .Job-content {
+    box-sizing: border-box;
+    width: (710rem / @baseFont);
+    margin: 0 auto;
+    border: 1px solid #f6f6f6;
+    background-color: #fff;
+    padding: .2rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:first-child {
+      border-top-left-radius: 0.3867rem !important;
+      border-top-right-radius: 0.3867rem !important;
+    }
+
+    .Job-content_top {
+      display: flex;
+      width: 100%;
+      height: 0.9667rem;
+
+      div {
+        flex: 1;
+
+        .recruiting {
+          width: 1.7rem;
+          height: 0.7rem;
+          margin-right: 0.2067rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .rec_tile {
+          width: 1rem;
+          height: 0.7rem;
+          color: #383838;
+          font-size: 0.53rem;
+          vertical-align: text-top;
+        }
+      }
+    }
+  }
+
+  .Job-content_bottom {
+    display: flex;
+
+    .Job-content-left {
+      padding: 0.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 10rem !important;
+
+      .work_content {
+        padding-top: 0.05rem;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+
+        span {
+          flex: 1;
+        }
+
+        .work_ppy {
+          width: 0.45rem;
+          height: 0.42rem;
+          line-height: 0.4rem;
+          margin-top: 0.1233rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_time {
+          width: 0.41rem;
+          height: 0.41rem;
+          line-height: 0.41rem;
+          margin-top: 0.15rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_eye {
+          width: 0.53rem;
+          height: 0.47rem;
+          line-height: 0.45rem;
+          margin-top: 0.15rem;
+        }
+
+        .work_h_title {
+          color: #9499b0;
+          font-size: 0.46rem;
+        }
+
+        i {
+          font-style: normal;
+        }
+      }
+    }
+
+    .Job-content-right {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.4rem 0;
+
+      div {
+        width: 100%;
+        line-height: 0.41rem;
+        line-height: 0.41rem;
+        text-align: right;
+
+        span {
+          margin-top: 20px;
+          font-size: 0.7rem;
+          color: #f3485e;
+        }
+
+        i {
+          font-style: normal;
+          font-size: 0.46rem;
+          color: #9499b0;
+        }
+      }
+    }
+  }
+}
+
+// 职位页面 筛选样式
+.Job_position {
+  width: (750rem / @baseFont);
+  background-color: #fff;
+  display: flex;
+  position: relative;
+
+  // 1.水平阴影的位置
+  // 2.垂直阴影的位置
+  // 3.模糊程度
+  // 4.阴影的尺寸
+  // 5.阴影的颜色
+  box-shadow: 1px -1px 5px -4px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+
+  div {
+    flex: 1;
+    text-align: center;
+    height: 1.6rem;
+    font-size: 0.5rem;
+    line-height: 3.2;
+    position: relative;
+
+    color: #77798e;
+
+    i {
+      position: absolute;
+      font-style: normal;
+      margin-left: .2rem;
+      transition: all .2s;
+      transform: rotate(0deg);
+    }
+
+    i:after {
+      font-family: "icomoon";
+      content: "\1e3";
+      font-size: 0.5rem;
+    }
+
+  }
+
+  // 职位筛选
+  .position_screen1,
+  .position_screen2,
+  .position_screen3 {
+    width: (750rem / @baseFont);
+    height: 13.1rem;
+    position: absolute;
+    top: 3.5rem;
+    background-color: #fff;
+    border-bottom-left-radius: .16rem;
+    border-bottom-right-radius: .16rem;
+    // 1.水平阴影的位置
+    // 2.垂直阴影的位置
+    // 3.模糊程度
+    // 4.阴影的尺寸
+    // 5.阴影的颜色
+    box-shadow: 0 2px 10px -4px rgba(0, 0, 0, 0.3);
+
+    .position_screen_content1,
+    .position_screen_content2 {
+      display: flex;
+      height: 88%;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      overflow-y: scroll;
+
+      /* 隐藏滚动条 */
+      &::-webkit-scrollbar {
+        width: 0;
+        /* 设置滚动条宽度 */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        /* 设置滚动条背景色 */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        /* 设置滚动条滑块颜色 */
+      }
+
+      span {
+        width: 43%;
+        height: 1.43rem;
+        line-height: 1.43rem;
+        background-color: #f6f6f6;
+        box-sizing: border-box;
+        border-radius: .16rem;
+        margin-bottom: .6rem !important;
+        border: .06rem solid transparent;
+        margin-left: .7rem;
+        cursor: pointer;
+
+        &:nth-child(-n+2) {
+          margin-top: .7rem;
+        }
+      }
+    }
+
+    .position_screen_contents {
+      display: flex;
+      height: 88%;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      flex-direction: column;
+
+      .screen_contnet {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .screen_time {
+          display: flex;
+        }
+
+        div {
+          text-align: left;
+          margin-left: .6rem;
+
+          span {
+            width: 29%;
+            height: 1.43rem;
+            text-align: center;
+            line-height: 1.43rem;
+            background-color: #f6f6f6;
+            box-sizing: border-box;
+            border-radius: .16rem;
+            margin-bottom: .6rem !important;
+            border: .06rem solid transparent;
+
+            &:nth-child(2) {
+              margin: 0 .6rem;
+            }
+
+          }
+
+          .span_active {
+            border: .06rem solid #0152fe;
+            background-color: #fff;
+            color: #275ffd;
+          }
+        }
+      }
+
+      .screen_title {
+        font-size: .6rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .cancel {
+    width: (750rem / @baseFont);
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-bottom-left-radius: .16rem;
+    border-bottom-right-radius: .16rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: .06rem solid #f6f6f6;
+    box-sizing: border-box;
+    z-index: 999;
+
+    button {
+      outline: none;
+      cursor: pointer;
+      border: 0;
+      background-color: #05319e;
+      color: #fff;
+      font-size: .65rem;
+      width: 6rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+
+      &:nth-child(1):hover {
+        background-color: #05309ebd;
+      }
+
+      &:nth-child(2) {
+        color: #6f90e3;
+        background-color: #d0cece;
+
+        &:hover {
+          background-color: #d0cecea6;
+        }
+      }
+    }
+
+    box-shadow: 0 2px 10px -4px rgba(0, 0, 0, 0.3);
+  }
+
+}
+
+// 职位页面图片
+.Job_screen {
+  width: (710rem / @baseFont);
+  height: (218rem / @baseFont);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.6rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2567rem;
+  }
+}
+
+// 职位页面列表样式
+.position-content {
+  box-sizing: border-box;
+  width: (710rem / @baseFont);
+  margin: 0 auto;
+  border: 1px solid #f6f6f6;
+  background-color: #fff;
+  padding: .2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:first-child {
+    border-top-left-radius: 0.3867rem !important;
+    border-top-right-radius: 0.3867rem !important;
+  }
+
+  .position-content_top {
+    display: flex;
+    width: 100%;
+    height: 0.9667rem;
+
+    div {
+      flex: 1;
+
+      .recruiting {
+        width: 1.7rem;
+        height: 0.7rem;
+        margin-right: 0.2067rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .rec_tile {
+        width: 1rem;
+        height: 0.7rem;
+        color: #383838;
+        font-size: 0.53rem;
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  .position-content_bottom {
+    display: flex;
+
+    .position-content-left {
+      padding: 0.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 10rem !important;
+
+      .work_content {
+        padding-top: 0.05rem;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+
+        span {
+          flex: 1;
+        }
+
+        .work_ppy {
+          width: 0.45rem;
+          height: 0.42rem;
+          line-height: 0.4rem;
+          margin-top: 0.1233rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_time {
+          width: 0.41rem;
+          height: 0.41rem;
+          line-height: 0.41rem;
+          margin-top: 0.15rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_eye {
+          width: 0.53rem;
+          height: 0.47rem;
+          line-height: 0.45rem;
+          margin-top: 0.15rem;
+        }
+
+        .work_h_title {
+          color: #9499b0;
+          font-size: 0.46rem;
+        }
+
+        i {
+          font-style: normal;
+        }
+      }
+    }
+
+    .position-content-right {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.4rem 0;
+
+      div {
+        width: 100%;
+        line-height: 0.41rem;
+        line-height: 0.41rem;
+        text-align: right;
+
+        span {
+          margin-top: 20px;
+          font-size: 0.7rem;
+          color: #f3485e;
+        }
+
+        i {
+          font-style: normal;
+          font-size: 0.46rem;
+          color: #9499b0;
+        }
+      }
+    }
+  }
+
+}
+
+// 工作
+.work_page {
+  width: (750rem / @baseFont);
+  display: flex;
+  flex-direction: column;
+
+  .work_top {
+    width: (750rem / @baseFont);
+    height: (368rem / @baseFont);
+
+    img {
+      width: (750rem / @baseFont);
+      height: 100%;
+    }
+  }
+
+  .work_centre {
+    width: (750rem / @baseFont);
+    background-color: #f7f7f7;
+
+    .work_img {
+      position: relative;
+
+      img {
+        padding: 1rem 0 11rem;
+        width: (750rem / @baseFont);
+        height: (368rem / @baseFont);
+      }
+
+      .work_imgtitle {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+
+        .work_centre_title {
+          text-align: center;
+          font-size: 0.55rem;
+          color: #6e7079;
+          margin-bottom: 0.1rem;
+        }
+
+        .work_centre_titles {
+          text-align: center;
+          font-size: 0.45rem;
+          color: #6f7179;
+          margin-bottom: 0.5rem;
+        }
+
+        .work_centre_button {
+          text-align: center;
+
+          button {
+            border: none;
+            color: #fff;
+            font-size: 0.55rem;
+            height: 1.3rem;
+            line-height: 1.3rem;
+            background: linear-gradient(to right, #fd9c19, #ffcf53);
+            border-radius: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 我的页面(模块1)
+.register-nav {
+  position: relative;
+  width: (750rem / @baseFont);
+  height: (420rem / @baseFont);
+
+  .register_bj {
+    width: 100%;
+    height: 100%;
+  }
+
+  .register_skip {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+
+
+    .register_img {
+      width: 2.3rem;
+      height: 2.3rem;
+      vertical-align: middle;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .register_click {
+      margin-top: 0.0667rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.2867rem;
+
+      .register_up {
+        font-size: 0.8rem;
+        color: #eaf1fb;
+        margin-bottom: 0.2rem;
+      }
+
+      .register_title {
+        font-size: 0.4rem;
+        color: #eaf1fb;
+      }
+    }
+
+    .register_ico {
+      flex: 1;
+
+      .register_content {
+        float: right;
+        color: #eaf1fb;
+        line-height: 2.2rem;
+
+
+        &::after {
+          font-family: "icomoon";
+          content: "\1e5";
+          font-size: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .job_my_resume {
+    box-sizing: border-box;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: (710rem / @baseFont);
+    height: (210rem / @baseFont);
+    background-color: #fff;
+    border-radius: 0.2867rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background: url(../img/job_my_resume.png) no-repeat 100% 100%;
+    background-size: auto;
+
+    .resume_title {
+      font-size: 0.7rem;
+      color: #383838;
+    }
+
+    .resume_acceptance {
+      font-size: 0.5rem;
+      color: #5e5c5c;
+      margin: 0.3rem 0;
+    }
+
+    .resume_accomplish {
+      font-size: 0.5rem;
+      color: #383838;
+
+      .resume_button {
+        padding: 0.2rem 0.66rem;
+        border: 1px solid #0152fe;
+        border-radius: 0.5333rem;
+        color: #0152fe;
+
+      }
+    }
+  }
+}
+
+// 我的页面(模块2 头像上传)
+.headPortrait {
+  width: 15rem;
+  position: fixed;
+  top: -500%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edeff6;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+  transition: all .5s;
+
+  // 更新图片加载蒙层
+  .balls {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: #edeff6a6;
+
+    .ballsbox {
+      position: absolute;
+      top: 50%;
+      width: 2.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #05309ec9;
+        transform: translateY(-100%);
+        animation: wave 0.7s ease-in-out alternate infinite;
+
+        &:nth-of-type(1) {
+          animation-delay: -0.4s;
+        }
+
+        &:nth-of-type(2) {
+          animation-delay: -0.2s;
+        }
+      }
+    }
+
+    @keyframes wave {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  // 返回
+  .header {
+    width: 100%;
+    height: 13%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 0.58rem;
+    color: #4e4e51;
+    line-height: (95rem / @baseFont);
+    display: flex;
+    position: relative;
+
+    .retreat {
+      width: 43%;
+      text-align: left;
+
+
+      &:before {
+        font-family: "icomoon";
+        content: "\1e4";
+        font-size: .8rem;
+        padding-left: .5rem;
+      }
+    }
+  }
+
+  .Portrait-content {
+
+    .startcontent {
+      position: relative !important;
+      background-color: #fff;
+      margin: .5rem .5rem 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: .1rem;
+
+      .startcontent-img-titme {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-bottom: .01rem solid #5d5b5ba8;
+        text-align: center;
+
+        img {
+          box-sizing: border-box;
+          margin: 1.4rem 0 auto;
+          width: 4rem;
+          height: auto;
+          border: .01rem solid #fff;
+          /* 白色边框使照片与背景分离 */
+          border-radius: .2rem;
+          /* 添加轻微的圆角效果 */
+          box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+          /* 添加轻微的阴影效果 */
+          border: .01rem solid #47464631;
+        }
+
+        span:nth-child(2) {
+          text-align: left;
+          font-size: .5rem;
+          color: #1f1f1fe4;
+          margin-bottom: .4rem;
+          padding-left: .6rem;
+        }
+
+        // 上传成功
+        .box-content {
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          background-color: #0648ee;
+          border-radius: .2rem;
+          font-size: .4rem;
+          color: #fff;
+          padding: .1rem .4rem;
+        }
+      }
+
+      .defaultAvatar-title {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          padding-left: .6rem;
+          font-size: .5rem;
+          color: #2e2e2e;
+          margin-bottom: .4rem;
+
+          &:nth-child(1) {
+            margin-top: .4rem;
+          }
+
+          i {
+            color: #f03a3a !important;
+
+          }
+        }
+
+      }
+    }
+
+    .defaultAvatar-button {
+      text-align: center;
+      margin-top: .5rem;
+      margin-bottom: .8rem;
+
+      button {
+        width: 5rem;
+        height: 1.3rem;
+        line-height: 1.3rem;
+        border: 0;
+        color: #fff;
+        background-color: #0648ee;
+        font-size: .5rem;
+        border-radius: 1rem;
+
+      }
+    }
+
+  }
+}
+
+// 我的页面(模块3 我的申请和查看全部)
+.applyfor {
+  box-sizing: border-box;
+  width: (710rem / @baseFont);
+  background-color: #fff;
+  border-radius: 0.2867rem;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 3.3rem;
+  flex-direction: column;
+  padding: 0.5rem;
+
+  .applyfor_examine {
+    box-sizing: border-box;
+    display: flex;
+
+    .applyfor_examine_my {
+      font-size: 0.7rem;
+      color: #383838;
+    }
+
+    .applyfor_examine_title {
+      flex: 1;
+      text-align: right;
+      font-size: 0.5rem;
+      color: #9499b0;
+
+
+      i {
+        font-style: normal;
+
+        &::after {
+          font-family: "icomoon";
+          content: "\1e5";
+          font-size: 0.36rem;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .applyfor_examine_content {
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    font-size: 0.3rem;
+    color: #383838;
+
+
+    div {
+      margin-top: 0.4rem;
+      flex: 1;
+      height: 2.5rem;
+      text-align: center;
+
+      img {
+        width: 3rem;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// 我的页面(模块4 更多服务)
+.more {
+  box-sizing: border-box;
+  width: (710rem / @baseFont);
+  background-color: #fff;
+  border-radius: 0.2867rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
+
+  padding: 0.5rem;
+
+  .more_top_serve {
+    font-size: 0.7rem;
+    color: #383838;
+  }
+
+  .more_bottom {
+    display: flex;
+
+    div {
+      flex: 1;
+      margin-top: 0.4rem;
+      font-size: 0.3rem;
+      color: #383838;
+      text-align: center;
+
+      img {
+        width: 2.7rem;
+        height: 85%;
+      }
+    }
+  }
+}
+
+// 我的页面(模块5 加载动画)
+.balls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: #d3d9e5;
+  }
+
+  span:nth-of-type(1) {
+    transform: translateX(-100%);
+    animation: left-swing 0.5s ease-in alternate infinite;
+  }
+
+  span:nth-of-type(3) {
+    transform: translateX(-95%);
+    animation: right-swing 0.5s ease-out alternate infinite;
+  }
+}
+
+@keyframes left-swing {
+
+  50%,
+  100% {
+    transform: translateX(95%);
+  }
+}
+
+@keyframes right-swing {
+  50% {
+    transform: translateX(-95%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+// 搜索页面(模块2 主要内容)
+.box_search {
+  z-index: 200;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  padding-top: 1.3rem;
+
+  .showTitle {
+    position: absolute;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    font-size: .4rem;
+    color: #9499b0;
+    position: relative;
+    padding-top: 8rem;
+
+    .titlContent {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -10%) !important;
+
+      img {
+        width: 5rem;
+        height: 6.3rem;
+      }
+
+      span {
+        display: inline-block;
+        position: absolute;
+        top: 67%;
+        left: 50%;
+        transform: translate(-50%, 2%) !important;
+      }
+    }
+  }
+}
+
+// 搜索页面(模块1 按钮和输入框)
+.box_search_content {
+  position: fixed;
+  background-color: #fff;
+  margin: 0 auto;
+  width: (750rem / @baseFont);
+  text-align: center;
+  vertical-align: bottom;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: .3rem .8rem;
+  z-index: 8888;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .5px;
+    width: 100%;
+    height: .05rem;
+    background-color: #fff;
+    box-shadow: 0 6px 13px rgba(131, 129, 129, 0.298);
+  }
+
+  // 取消按钮
+  .search_content_left {
+    vertical-align: middle;
+    color: #999;
+    padding-right: .5rem;
+    cursor: pointer;
+    font-size: .5rem;
+  }
+
+  // 输入框
+  .search_content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: .2rem;
+    overflow: hidden;
+
+
+    &::before {
+      font-family: "icomoon";
+      content: "\f17b";
+      font-size: .4rem;
+      margin-left: .4rem;
+    }
+
+    #inputValue {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: .5rem;
+      padding: .3rem .2rem;
+      vertical-align: middle;
+      background-color: #f2f2f2;
+      /* 垂直居中对齐 */
+    }
+  }
+
+  // 搜索按钮
+  .search_content_right {
+    color: white;
+    background-color: #123a9d;
+    vertical-align: middle;
+    margin-left: .5rem;
+    cursor: pointer;
+    font-size: .5rem;
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+
+    &:hover {
+      background-color: #3f6cdc;
+    }
+  }
+
+}
+
+// 职位详情页面容器
+.details_content {
+  position: relative;
+
+  .indent {
+    text-indent: 25px;
+  }
+
+  .details_submit {
+    position: fixed;
+    left: 50%;
+    bottom: .56rem;
+    width: (630rem / @baseFont);
+    transform: translateX(-50%);
+
+    button {
+      padding: .55rem 0;
+      color: #fff;
+      border: 0;
+      font-size: .55rem;
+      background-color: #d5d8e1;
+      border-radius: 3rem;
+    }
+  }
+
+  .Particulars {
+    width: (750rem / @baseFont);
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+
+    .header {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: 0 auto;
+      background-color: #fff;
+      font-size: 0.58rem;
+      color: #4e4e51;
+      line-height: (95rem / @baseFont);
+      display: flex;
+      position: relative;
+      box-shadow: 0 2px 20px rgba(131, 129, 129, 0.09);
+
+      .retreat {
+        width: 43%;
+        text-align: left;
+
+
+        &:before {
+          font-family: "icomoon";
+          content: "\1e4";
+          font-size: .8rem;
+          padding-left: .5rem;
+        }
+      }
+    }
+
+    .nav {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+
+      div {
+        flex: 1;
+        color: #c3c3c3;
+        font-size: 0.5rem;
+        padding-bottom: 0.6rem;
+        /* 小手 */
+
+
+        span {
+          display: inline-block;
+          width: 50%;
+          height: 100%;
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+
+
+}
+
+// 职位详情(职位工作内容)
+.details {
+  margin-top: .45rem !important;
+  width: (710rem / @baseFont);
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 0.3867rem;
+  margin-bottom: .4rem;
+
+  i {
+    font-style: normal;
+  }
+
+  .headline {
+    width: (710rem / @baseFont);
+    text-align: left;
+    color: #535151;
+    font-weight: 700;
+    margin: .5rem 0;
+    padding-left: .5rem;
+
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    align-content: flex-start;
+    margin-bottom: .1rem;
+
+    .details_title {
+      color: #535252;
+      margin: .6rem 0;
+      padding: 0 .5rem;
+      line-height: 1.1rem;
+    }
+
+    .details_content {
+      color: #9499b0;
+      font-size: .55rem;
+      padding: 0 .5rem;
+      line-height: 1.1rem;
+    }
+  }
+}
+
+// 职位详情(数据样式)
+.Job-details {
+  box-sizing: border-box;
+  width: (710rem / @baseFont);
+  margin: 0 auto;
+  border: 1px solid #f6f6f6;
+  background-color: #fff;
+  padding: .2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.3867rem;
+
+
+  .Job-content_top {
+    display: flex;
+    width: 100%;
+    line-height: 1rem;
+
+    div {
+      flex: 1;
+
+      .recruiting {
+        width: 1.7rem;
+        height: 0.7rem;
+        margin-right: 0.2067rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .rec_tile {
+        width: 1rem;
+        height: 0.7rem;
+        color: #383838;
+        font-size: 0.53rem;
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  .Job-content_bottom {
+    display: flex;
+
+    .Job-content-left {
+      padding: 0.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 10rem !important;
+
+      .work_content {
+        padding-top: 0.05rem;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+
+        span {
+          flex: 1;
+        }
+
+        .work_ppy {
+          width: 0.45rem;
+          height: 0.42rem;
+          line-height: 0.4rem;
+          margin-top: 0.1233rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_time {
+          width: 0.41rem;
+          height: 0.41rem;
+          line-height: 0.41rem;
+          margin-top: 0.15rem;
+          margin-right: 0.1067rem;
+        }
+
+        .work_eye {
+          width: 0.53rem;
+          height: 0.47rem;
+          line-height: 0.45rem;
+          margin-top: 0.15rem;
+        }
+
+        .work_h_title {
+          color: #9499b0;
+          font-size: 0.46rem;
+        }
+
+        i {
+          font-style: normal;
+        }
+      }
+    }
+
+    .Job-content-right {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.4rem 0;
+
+      div {
+        width: 100%;
+        line-height: 0.41rem;
+        text-align: right;
+
+        span {
+          margin-top: 20px;
+          font-size: 0.7rem;
+          color: #f3485e;
+        }
+
+        i {
+          font-style: normal;
+          font-size: 0.46rem;
+          color: #9499b0;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+// 用户基本资料(返回)
+.basics {
+  width: (750rem / @baseFont);
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 222;
+  background-color: #fff;
+
+  .header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 0.58rem;
+    color: #4e4e51;
+    line-height: (95rem / @baseFont);
+    display: flex;
+    position: relative;
+    box-shadow: 0 2px 20px rgba(131, 129, 129, 0.09);
+
+    .retreat {
+      width: 43%;
+      text-align: left;
+
+
+      &:before {
+        font-family: "icomoon";
+        content: "\1e4";
+        font-size: .8rem;
+        padding-left: .5rem;
+      }
+    }
+  }
+}
+
+// 用户基本资料(输入框)
+.basics-input {
+  width: (750rem / @baseFont);
+  background-color: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  padding: 2.7rem .5rem 1.2rem;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  .title {
+    color: #8f8b8b;
+    font-size: 0.55rem;
+
+    i {
+      color: #e8764f;
+    }
+  }
+
+  .input-content {
+    height: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 1.15rem;
+
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      border: none;
+      text-align: start;
+      font-size: 0.55rem;
+      color: #443f3f;
+
+      &::placeholder {
+        font-size: 0.55rem;
+        color: #d2caca;
+      }
+    }
+  }
+
+  .gender-content,
+  .deploy-content,
+  .putUp-content {
+    padding-bottom: 1rem;
+
+    input[type="radio"] {
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.3rem;
+    }
+
+    #girl,
+    #no,
+    #nos {
+      margin-left: 0.8rem;
+    }
+
+    label {
+      font-size: 0.6rem;
+      color: #d2caca;
+    }
+  }
+
+  .submit {
+    position: fixed;
+    left: 50%;
+    bottom: 0.5rem;
+    transform: translate(-50%);
+    width: (600rem / @baseFont);
+    background-color: #d5d8e1;
+    border-radius: 4rem;
+    overflow: hidden;
+
+    div {
+      width: 100%;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      border: 0;
+      outline: none;
+      color: #fff;
+      font-size: .7rem;
+      background-color: transparent;
+    }
+  }
+}
+
+// 我的申请
+.positionParticulars {
+  width: (750rem / @baseFont);
+  text-align: center;
+  margin: 0 auto;
+
+  .header {
+    width: (750rem / @baseFont);
+    line-height: (95rem / @baseFont);
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 0.58rem;
+    color: #4e4e51;
+    line-height: (95rem / @baseFont);
+    align-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    display: flex;
+    box-shadow: 0 2px 20px rgba(131, 129, 129, 0.09);
+
+    .retreat {
+      width: 43%;
+      text-align: left;
+
+      &:before {
+        font-family: "icomoon";
+        content: "\1e4";
+        font-size: .8rem;
+        padding-left: .5rem;
+      }
+    }
+
+    .headernav {
+      display: flex;
+      border-bottom: .01rem solid #eaecf0;
+
+      span :nth-child(1) {
+        width: 43%;
+        text-align: left;
+      }
+
+    }
+
+    .tablenav {
+      display: flex;
+      background-color: #fff;
+
+      div {
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        span {
+          font-size: .48rem;
+          padding-bottom: .25rem;
+          border-bottom: .1rem solid transparent;
+        }
+      }
+    }
+
+  }
+
+  .Particulars-img {
+    width: (750rem / @baseFont);
+    padding-top: 4rem;
+    background-color: #f7f7f7;
+
+    img {
+      padding-top: 5rem;
+      width: (750rem / @baseFont);
+      height: 100%;
+    }
+  }
+
+  // 内容开始
+  .positionParticularsart {
+    width: 100%;
+    padding: 3.8rem 0 1rem;
+    box-sizing: border-box;
+
+    .positionParticulars-content {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0 auto;
+      border-bottom: 1px solid #f6f6f6;
+      background-color: #fff;
+      padding: .2rem 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+
+      &:last-child {
+        border-bottom-left-radius: 0.3867rem;
+        border-bottom-right-radius: 0.3867rem;
+      }
+
+      .positionParticulars-content_top {
+        display: flex;
+        width: 100%;
+        height: 0.9667rem;
+
+        span:nth-of-type(1) {
+          padding-left: .1rem;
+          font-size: .55rem !important;
+          color: #888a93 !important;
+
+        }
+
+        span:nth-of-type(2) {
+          color: #383838ca !important;
+          font-size: 0.5rem !important;
+        }
+
+        .work_ppy {
+          width: 0.45rem;
+          height: 0.42rem;
+          line-height: 0.4rem;
+          margin-top: 0.1233rem;
+          margin-right: 0.1067rem;
+        }
+
+        div {
+          flex: 1;
+
+          .recruiting {
+            width: 1.7rem;
+            height: 0.7rem;
+            margin-right: 0.2067rem;
+            margin-bottom: 0.2rem;
+          }
+
+          .rec_tile {
+            width: 1rem;
+            height: 0.7rem;
+            color: #383838;
+            font-size: 0.53rem;
+          }
+        }
+      }
+
+      .positionParticulars-content_bottom {
+        width: 100%;
+        display: flex;
+        justify-content: first baseline;
+
+        .positionParticulars-content-left {
+          padding: 0.4rem 0;
+          display: flex;
+          flex-wrap: wrap;
+          width: 10rem !important;
+
+          .work_content {
+            padding-top: 0.05rem;
+
+          }
+
+          div {
+            width: 100%;
+            display: flex;
+
+            span {
+              &:nth-of-type(1) {
+                padding-left: .1rem;
+                font-size: .55rem !important;
+                color: #888a93 !important;
+              }
+
+              &:nth-of-type(2) {
+                color: #383838ca !important;
+                font-size: 0.5rem;
+              }
+            }
+
+            .work_ppy {
+              width: 0.45rem;
+              height: 0.42rem;
+              line-height: 0.4rem;
+              margin-top: 0.1233rem;
+              margin-right: 0.1067rem;
+            }
+
+            .work_time {
+              width: 0.41rem;
+              height: 0.41rem;
+              line-height: 0.41rem;
+              margin-top: 0.15rem;
+              margin-right: 0.1067rem;
+            }
+
+            .work_eye {
+              width: 0.53rem;
+              height: 0.47rem;
+              line-height: 0.45rem;
+              margin-top: 0.15rem;
+            }
+
+            .work_h_title {
+              color: #9499b0;
+              font-size: 0.46rem;
+            }
+
+            i {
+              font-style: normal;
+            }
+          }
+        }
+
+        .positionParticulars-content-right {
+          display: flex;
+          flex-wrap: wrap;
+          width: 30%;
+
+          div {
+            width: 100%;
+            line-height: 0.41rem;
+            line-height: 0.41rem;
+            text-align: right;
+
+            span {
+              margin-top: 20px;
+              font-size: 0.7rem;
+              color: #f3485e;
+            }
+
+            i {
+              font-style: normal;
+              font-size: 0.46rem;
+              color: #9499b0;
+            }
+          }
+        }
+      }
+
+      .positionParticulars-content_dispose {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: .55rem;
+        color: #888a93;
+
+        .particular {
+          display: flex;
+          flex-direction: column;
+
+          i {
+            font-size: .5rem !important;
+            color: #383838ca !important;
+          }
+
+          .f3485eSty {
+            font-size: .5rem !important;
+            color: #f3485e !important;
+          }
+
+          .work_ppy {
+            width: 0.45rem;
+            height: 0.42rem;
+            line-height: 0.4rem;
+            margin-top: 0.1233rem;
+            margin-right: 0.1067rem;
+          }
+
+          .cause {
+            display: flex;
+            margin: .1rem 0 .5rem;
+
+            span:nth-child(2) {
+              flex: 1;
+
+              textarea {
+                // 禁用文本
+                user-select: none;
+                padding: .2rem .1rem;
+                resize: none;
+                width: 97%;
+                border: 1px solid #f6f6f6;
+                color: #616161;
+                font-size: .5rem;
+                font-family: monospace;
+                /* 使用等宽字体以保持数字对齐 */
+              }
+            }
+          }
+        }
+
+        .button-content {
+          margin: 0 auto;
+          width: 60%;
+          text-align: center;
+          overflow: hidden;
+          border-radius: .3rem;
+          background-color: #f6f6f6;
+          margin-bottom: .5rem;
+
+          button {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            padding: .35rem .1rem;
+            outline: none;
+            color: #fff;
+            background-color: #05309ebe;
+
+            &:hover {
+              background-color: #05309e6e !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 用户信息通知
+.informationuse {
+  width: (750rem / @baseFont);
+  text-align: center;
+  margin: 0 auto;
+
+
+  .header {
+    width: (750rem / @baseFont);
+    line-height: (95rem / @baseFont);
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 0.58rem;
+    color: #4e4e51;
+    line-height: (95rem / @baseFont);
+    align-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    display: flex;
+
+    .retreat {
+      width: 43%;
+      text-align: left;
+
+      &:before {
+        font-family: "icomoon";
+        content: "\1e4";
+        font-size: .8rem;
+        padding-left: .5rem;
+      }
+    }
+
+    .headernav {
+      display: flex;
+      border-bottom: .01rem solid #eaecf0;
+
+      span :nth-child(1) {
+        width: 43%;
+        text-align: left;
+      }
+
+    }
+
+    .tablenav {
+      display: flex;
+      background-color: #fff;
+
+      div {
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        span {
+          padding-bottom: .25rem;
+          border-bottom: .1rem solid transparent;
+        }
+      }
+
+
+    }
+
+  }
+
+  .Particulars-img {
+    width: (750rem / @baseFont);
+    padding-top: 4rem;
+    background-color: #f7f7f7;
+
+    img {
+      padding: 12rem 0 0;
+      width: (750rem / @baseFont);
+    }
+  }
+}
