@@ -1,0 +1,151 @@
+.w-ty {
+  width: 98.5% !important;
+  margin: 0 auto;
+}
+a {
+  color: #515a6e;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?s2t4uy');
+  src: url('../fonts/icomoon.eot?s2t4uy#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?s2t4uy') format('truetype'), url('../fonts/icomoon.woff?s2t4uy') format('woff'), url('../fonts/icomoon.svg?s2t4uy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+main {
+  width: 1260px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f6f8fa;
+  padding-bottom: 0.7%;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  justify-items: flex-start;
+}
+nav .admin-content {
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  display: flex;
+  background-color: #fff;
+  border-top: 1.5px solid #f0f0f0;
+  border-left: 1.5px solid #f0f0f0;
+  border-right: 1.5px solid #f0f0f0;
+  box-sizing: border-box;
+}
+nav .admin-content .ico {
+  width: 2%;
+  margin-left: 60px;
+  text-align: center;
+  color: #495060;
+  text-align: right;
+  font-size: 1.6rem;
+}
+nav .admin-content .ico::before {
+  font-family: "icomoon";
+  content: '\f17b';
+  color: #5c6372;
+}
+nav .admin-content .adminInput {
+  flex: 1;
+}
+nav .admin-content .adminInput input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 0 22.5px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #495060;
+  margin-left: 7.5px;
+}
+nav .admin-content .adminInput input::placeholder {
+  font-size: 1.5rem;
+  color: #757575;
+  margin-left: 15px;
+  color: #495060;
+}
+nav .admin-content .userTitle button {
+  font-size: 1.2rem;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid #e2e4ea;
+  color: #575757;
+  border-radius: 0.3rem;
+  padding: 0 2rem;
+  margin-right: 2rem;
+}
+.navigation {
+  display: flex;
+  width: 98.5%;
+  height: 4.3rem;
+  line-height: 4.3rem;
+  margin: 0.7% 0.7% 0 auto;
+  background-color: #fff;
+  border-bottom: 0.22rem solid #f0f0f0;
+}
+.navigation div {
+  font-size: 1.3rem;
+}
+.navigation div a {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  padding: 0 4rem;
+  overflow: hidden;
+}
+.navigation .Admin a::before {
+  font-family: "icomoon";
+  vertical-align: top;
+  font-size: 1.3rem;
+  margin-right: 7.5px;
+  content: '\eb1d';
+}
+.navigation .Entry a::before {
+  font-family: "icomoon";
+  vertical-align: middle;
+  font-size: 1.3rem;
+  margin-right: 7.5px;
+  content: '\ef63';
+}
+.navigation .ApplyFor a::before {
+  font-family: "icomoon";
+  vertical-align: middle;
+  font-size: 1.3rem;
+  margin-right: 7.5px;
+  content: '\eeae';
+}
+.navigation .Inform a::before {
+  font-family: "icomoon";
+  vertical-align: middle;
+  font-size: 1.3rem;
+  margin-right: 7.5px;
+  content: '\ef17';
+}
+.Usercontent {
+  background-color: #fff;
+  padding: 20px 0 50px;
+}
+.Usercontent .userheader .userTilte {
+  font-size: 18px;
+  color: #1b1919;
+  margin: 12px;
+}
+.positionheader {
+  margin-top: 50px;
+}
+.positionheader span {
+  font-size: 18px;
+  color: #1b1919;
+  margin: 12px;
+}

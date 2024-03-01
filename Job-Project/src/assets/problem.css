@@ -1,0 +1,84 @@
+.header-name_fr>div .a3 {
+    height: 80px;
+    display: inline-block;
+    border-bottom: 4px solid #0052fe;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.problem {
+    width: 980px;
+    padding: 0 60px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 96px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.problem_tab {
+    overflow: hidden;
+    height: 82px;
+    position: relative;
+}
+
+.pt_item {
+    line-height: 30px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 30px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 82px;
+    width: 238px;
+    margin-right: 50px;
+}
+
+.pt_item_text_ac {
+    font-size: 20px;
+    margin-top: 26px;
+    font-family: PingFangSC-Medium;
+    cursor: pointer;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.pt {
+    font-size: 28px;
+    border-bottom: 3px solid #0052FE;
+    border-radius: 13px;
+}
+
+.pt_item_tip {
+    background: #0052FE;
+    border-radius: 5px;
+    width: 12px;
+    height: 4px;
+    margin: 8px auto;
+}
+
+.problem_list {
+    padding-bottom: 24px;
+}
+
+.problem_none {
+    display: block !important;
+}
+
+.pcr_mid_title11 {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #383838;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: 28px;
+
+}
+
+.pcr_mid_content1 {
+    font-size: 14px;
+    color: #4D4F5A;
+    letter-spacing: 0;
+    line-height: 21px;
+}
